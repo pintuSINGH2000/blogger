@@ -1,0 +1,30 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.food {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  
+}
+
+.game {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+}
+
+.tech {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
+
+.flower {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+}
