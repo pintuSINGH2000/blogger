@@ -27,8 +27,12 @@ const Login = () => {
     if (processing) return;
     setProcessing(true);
     try {
-      await dispatch(loginApi(formData));
-      navigate("/blog");
+      const res = await dispatch(loginApi(formData));
+      if(res?.token){
+        const {message,...user} = res;
+        localStorage.setItem("user",JSON.stringify(user));
+        navigate("/blog");
+      }
       setProcessing(false);
     } catch (error) {
       setProcessing(false);

@@ -1,0 +1,73 @@
+.container {
+  max-width: 1080px;
+  box-shadow: 0px 4px 10px 0px rgba(233, 68, 75, 0.25);
+  background: white;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.save{
+    background-color: rgb(48 191 48);
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    width: 100px;
+}
+
+.inputContainer{
+    margin-bottom: 30px;
+}
+.input {
+  width: 50%;
+  padding: 20px 15px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgba(99, 99, 100, 1);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.quill{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.error {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: red;
+    margin: 5px;
+  }
+
+  .lodingState{
+    width: 100vw;
+    height: 80vh;
+  }
+
+  .saveIcon{
+    font-size: 40px;
+  }
