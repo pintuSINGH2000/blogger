@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Accessing and Using the Deployed Application
+# Deployed Application URL
+The Blogger backend application is live and accessible at the following URL:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://blogger-tan-three.vercel.app/ 
 
-## Available Scripts
+# Landing on the Homepage 
+   # Homepage:
+    When you visit the application at https://your-render-url.com, you will land on the homepage.
+    If you are not logged in, you will be able to view public posts but will need to log in or sign up to access additional features like creating posts or commenting.
+    ![Screenshot (234)](https://github.com/user-attachments/assets/c68b767a-6586-405a-81c4-38ef733aaeed)
+# Using the Application
+   # 1. User Registration and Authentication
+     Sign Up:
+     From the homepage, navigate to https://blogger-tan-three.vercel.app/register.
+     Enter your username, email, and password to create a new account.
+     ![Screenshot (218)](https://github.com/user-attachments/assets/d78d8aae-b9ca-44b8-9697-863df4e4c575)
 
-In the project directory, you can run:
+     Log In:
+     From the homepage, navigate to https://blogger-tan-three.vercel.app/login or click the "Sign In" button.
+     Enter your registered email and password.
+     On successful login, you will navigate to view all post page.
+     ![Screenshot (220)](https://github.com/user-attachments/assets/e6a21efa-80f8-4ee4-9147-71ba58be206c)
+   # 2. Managing Blog Posts
+     Create and Edit a Post:
+     After logging in, click on "Create Blog" button.
+     Provide the necessary details such as the title,image and content of the post.
+     Submit the form to publish your post.
+     ![Screenshot (221)](https://github.com/user-attachments/assets/e4be70aa-7f36-4b91-bcc2-937d004908ef)
 
-### `npm start`
+     View All Posts:
+     From the homepage, navigate to https://blogger-tan-three.vercel.app/blog.
+     You’ll see a list of all public blog posts with different category like draft, publish, thrash and all.
+     ![Screenshot (223)](https://github.com/user-attachments/assets/668ab5e9-3d02-4ab1-8e53-9ce6b1851aa9)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    View a Single Post:
+    Click on Share button from post menu and then navigate  https://blogger-tan-three.vercel.app/blog/:postId.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Delete a Post:
+    Click on "Move to thrash" to delete post.
+   #  3. Commenting on Posts
+   Add a Comment:
+   On the post’s page (https://blogger-tan-three.vercel.app/blog/:postId), scroll down to the comments section.
+   If you are login it will show input for comment.Enter your comment and submit it.
+   
+   Reply to a Comment:
+   Click the "Reply" button under a comment, enter your reply, and submit it.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Delete a Comment:
+   If you are the author of the comment, you can delete it by clicking on delete button.
