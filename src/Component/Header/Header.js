@@ -24,6 +24,11 @@ const Header = ({ isPost }) => {
       navigate(`/blog/edit/${res?.postId}`);
     }
   };
+
+  const handleLogout = () =>{
+    localStorage.clear();
+    navigate("/login");
+  }
   return (
     <div className={styles.container}>
       <div className={`${styles.logo}`}>
@@ -38,16 +43,32 @@ const Header = ({ isPost }) => {
             </p>
           </div>
         ) : (
-          <button className={`${styles.signIn} open-sans-semibold cursor-pointer`} onClick={()=>navigate("/login")}>Sign In</button>
-        )}
-        {!isPost && (
           <button
-            className={`${styles.create} open-sans-semibold cursor-pointer`}
-            onClick={handleCreatePost}
+            className={`${styles.signIn} open-sans-semibold cursor-pointer`}
+            onClick={() => navigate("/login")}
           >
-            Create Blog
+            Sign In
           </button>
         )}
+        <div>
+          {user && (
+            <button
+              className={`${styles.create} open-sans-semibold cursor-pointer`}
+              style={{ backgroundColor: "red",marginRight:"10px" }}
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          )}
+          {!isPost && (
+            <button
+              className={`${styles.create} open-sans-semibold cursor-pointer`}
+              onClick={handleCreatePost}
+            >
+              Create Blog
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

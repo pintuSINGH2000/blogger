@@ -64,8 +64,12 @@
 }
 
 .ql-tooltip {
-  left: 50% !important;
-  top: -50px !important;
+  top: 3% !important;
+  left: 1% !important;
+}
+
+.ql-tooltip input{
+  width: 100px !important;
 }
 
 @keyframes fadeIn {
