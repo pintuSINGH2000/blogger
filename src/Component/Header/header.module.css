@@ -4,6 +4,10 @@
     justify-content: space-between;   
     padding: 20px;
     background: white;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
  }
  
  .btn{
@@ -58,6 +62,19 @@
  .username{
     margin: 0px;
     font-size: 23px;
-    width: 150px;
+    max-width: 150px;
     text-transform: capitalize;
+ }
+
+ @media screen and (max-width: 600px) {
+    .btn{
+        flex-direction: column;
+        align-items: end;
+    }
+    .profile{
+        margin: 0px;
+    }
+    .signIn{
+        width: 100%;
+    }
  }

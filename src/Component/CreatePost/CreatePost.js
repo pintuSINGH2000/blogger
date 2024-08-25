@@ -99,12 +99,20 @@ const CreatePost = () => {
     if (isProcessing) return;
     setIsProcessing(true);
     if (postData.status === 1) {
-      await updatePost(postData, postId);
+      const res = await updatePost(postData, postId);
+      if (res?.isUnauthorized) {
+        localStorage.clear();
+        navigate("/login");
+      }
       setIsSaved(true);
     } else {
       setIsAutoSaveActive(false);
       postData.status=1;
-      await updateStatus(postData, postId);
+      const res=await updateStatus(postData, postId);
+      if (res?.isUnauthorized) {
+        localStorage.clear();
+        navigate("/login");
+      }
       navigate("/blog");
     }
     setIsProcessing(false);
@@ -124,6 +132,10 @@ const CreatePost = () => {
               },
               postId
             );
+            if (res?.isUnauthorized) {
+              localStorage.clear();
+              navigate("/login");
+            }
           } catch (error) {
             console.error("Error saving draft:", error);
           }
@@ -131,21 +143,29 @@ const CreatePost = () => {
         5000,
         () => setIsSaved(true)
       ),
+          //eslint-disable-next-line
     [postId]
   );
 
   useEffect(() => {
-    if (!isSaved && isChange && postData.status==2) {
+    if (!isSaved && isChange && postData.status===2) {
       throttledSaveDraft(postData);
     }
-  }, [postData, isSaved]);
+        //eslint-disable-next-line
+  }, [postData, isSaved,isChange]);
 
   useEffect(() => {
     const getPostData = async () => {
       setIsLoading(true);
       const res = await getPost(postId);
+      if (res?.isUnauthorized) {
+        localStorage.clear();
+        navigate("/login");
+      }
       if (res?.post) {
         setPostData(res?.post);
+      }else{
+        navigate("/*");
       }
       setIsLoading(false);
     };
@@ -194,12 +214,12 @@ const CreatePost = () => {
                   />
                 ))}
               <button
-                className={`${styles.save} poppins-500 cursor-pointer flexbox-center`}
+                className={`${styles.save} ${styles.topSaveBtn} poppins-500 cursor-pointer flexbox-center `}
                 onClick={handleStatus}
               >
                 {isProcessing ? (
                   <Spinner />
-                ) : postData?.status == 1 ? (
+                ) : postData?.status === 1 ? (
                   "Update"
                 ) : (
                   "Publish"
@@ -236,6 +256,18 @@ const CreatePost = () => {
               className={styles.quill}
             />
           </div>
+          <button
+                className={`${styles.save} ${styles.bottomSaveBtn} poppins-500 cursor-pointer flexbox-center`}
+                onClick={handleStatus}
+              >
+                {isProcessing ? (
+                  <Spinner />
+                ) : postData?.status === 1 ? (
+                  "Update"
+                ) : (
+                  "Publish"
+                )}
+              </button>
         </div>
       )}
     </>

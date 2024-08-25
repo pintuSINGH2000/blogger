@@ -5,6 +5,8 @@
   margin: 30px auto;
   border-radius: 10px;
   padding: 30px;
+  position: relative;
+  top: 70px;
 }
 
 .header{
@@ -26,6 +28,10 @@
     color: white;
     border: none;
     width: 100px;
+}
+
+.bottomSaveBtn{
+  display: none;
 }
 
 .inputContainer{
@@ -70,4 +76,34 @@
 
   .saveIcon{
     font-size: 40px;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .container {
+      margin: 20px;
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    .container{
+      top: 120px;
+    }
+    .title{
+      font-size: 20px;
+    }
+    .input {
+      width: 100%;
+    }
+
+    .topSaveBtn{
+       display: none;
+     }
+
+     .bottomSaveBtn{
+      display: flex;
+      margin: auto;
+     }
+
+    
   }

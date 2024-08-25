@@ -1,0 +1,85 @@
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.postDetail {
+  position: absolute;
+  width: 80%;
+  background: white;
+  bottom: 0%;
+  z-index: 9999;
+  padding: 5%;
+  word-break: break-all;
+  text-align: center;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  margin: 10% 10%;
+}
+
+.impressions {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.impression {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.impressionIcon {
+  font-size: 18px;
+  color: #90a4ae;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.date {
+  margin: 10px 0px;
+  color: #5f6d73;
+}
+.dotIcon {
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.menu {
+    width: 180px;
+  position: absolute;
+  right: 9%;
+  top: 11%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  z-index: 99999;
+}
+
+.menuItem{
+    padding: 8px 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.menuIcon{
+    font-size: 20px;
+}

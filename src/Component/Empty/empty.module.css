@@ -1,0 +1,93 @@
+.empty {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("../../../public/image/lost.png");
+  position: relative;
+  background-size: cover;
+ 
+}
+.wrapper {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: 35px;
+  color: orange !important;
+  font-family: fantasy;
+  padding-right: 24px;
+  gap: 10px;
+}
+.logoIcon {
+  color: orange;
+  font-size: 30px;
+}
+.logo {
+  height: 40px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  height: 75vh;
+}
+.mainHeading {
+  font-size: 200px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.mainTitle {
+  font-size: 100px;
+  font-weight: 300;
+}
+.mainContent {
+  font-size: 25px;
+  margin: 10px;
+}
+.emptyBtn {
+  background-color: orange;
+  padding: 10px 30px;
+  margin: 10px;
+  list-style: none;
+  border-radius: 6px;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  .mainContent {
+    font-size: 15px;
+  }
+
+  .mainTitle{
+    font-size: 50px;
+  }
+  .mainHeading {
+    font-size: 50px;
+  }
+
+  .main {
+    font-size: 150px;
+  }
+  .wrapper{
+    padding:20px 15px;
+  }
+
+  .emptyBtn{
+    font-size: 24px;
+  }
+}
